@@ -1,5 +1,6 @@
 var asciify = require("asciify");
 const chalk = require('chalk');
+
 asciify(`Loading...`, function (err, res) {
     console.log(chalk.yellow.bgRed.bold(res));
 });
