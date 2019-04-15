@@ -25,10 +25,10 @@ const spotifyThis = () => {
                 query: song,
                 limit: 10
             })
-            .then(function (response) {
+            .then(function(response) {
                 const data = response.tracks.items;
 
-                asciify(song, function (err, res) {
+                asciify(song, function(err, res) {
                     log(chalk.yellow.bgRed.bold(res));
                 });
 
@@ -42,15 +42,21 @@ const spotifyThis = () => {
                     if (data[i].preview_url === null) {
                         log(chalk.bgRed.white.bold(`Preview Not Available`));
                     } else {
-                        log(chalk.white.bgBlue.bold(`Preview: ${data[i].preview_url}`));
+                        log(
+                            chalk.white.bgBlue.bold(
+                                `Preview: ${data[i].preview_url}`
+                            )
+                        );
                     }
                     log(chalk.red.bold('\n+-+-+-+-+-+-+-+-+-+-+-+\n'));
                 }
             })
-            .catch(function (err) {
+            .catch(function(err) {
                 console.log(err);
-            })
-    };
-}
+            });
+    }
+};
 
 spotifyThis();
+
+module.exports = { spotifyThis };
