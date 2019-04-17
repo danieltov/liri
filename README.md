@@ -20,3 +20,7 @@ This will output any information from the movie "get out", using the OMDB API.
 ### do-what-it-says
 
 This command will return a pre-determined set in formation, as specified in `random.txt`. An example command line call would be `> node liri do-what-it-says`
+
+### TODOs:
+
+Print program output into a `log.txt` file.
