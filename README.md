@@ -24,3 +24,7 @@ This command will return a pre-determined set in formation, as specified in `ran
 ### See it in action
 
 View it at `liri_test.mov`
+
+### TODOs:
+
+Print program output into a `log.txt` file.
